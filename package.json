@@ -1,0 +1,58 @@
+{
+  "name": "min-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "dev": "node -r ts-node/register -r dotenv/config index.ts",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jay-bulk/min-repo.git"
+  },
+  "author": "jay-bulk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jay-bulk/min-repo/issues"
+  },
+  "homepage": "https://github.com/jay-bulk/min-repo#readme",
+  "dependencies": {
+    "@databases/pg": "^5.4.1",
+    "fastify": "^4.20.0",
+    "fastify-plugin": "^4.5.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.2",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.45.0",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.1.6"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "passWithNoTests": true,
+    "testEnvironment": "node",
+    "verbose": true,
+    "preset": "ts-jest"
+  },
+  "standard": {
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  }
+}
